@@ -20,13 +20,13 @@ app.set('port', process.env.PORT || 4000);
 
 app.use(cors());
 app.use(Express.json());
-app.use(Express.static(Path.resolve(__dirname,'public')));
+// app.use(Express.static(Path.resolve(__dirname,'public')));
 
 app.use("/api", Routers)
 
-app.get('*', function (req, res, next){
-    res.sendFile(Path.join(__dirname, 'public/index.html'));
-})
+// app.get('*', function (req, res, next){
+//     res.sendFile(Path.join(__dirname, 'public/index.html'));
+// })
 
 startConc();
 

@@ -3,7 +3,7 @@ import {connect, set} from 'mongoose'
 import * as dotenv from 'dotenv'
 dotenv.config();
 
-const mongoURL = `mongodb+srv://location.yfphm8m.mongodb.net/${process.env.DB_NAME}`
+const mongoURL = `${process.env.DB_URL}/${process.env.DB_NAME}`
 
 export default async function startConc(){
     set("strictQuery", false);

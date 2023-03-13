@@ -12,7 +12,6 @@ router.route('/store')
 router.route('/store/change/:id')
 		.put(verifyToken, updateStore)
 		.delete(verifyToken, deleteStore)
-		// .put(updateStore)
 
 router.route('/user')
 		.post(loggin)
